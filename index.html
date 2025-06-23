@@ -14,97 +14,48 @@
             font-family: "Inter", sans-serif;
             scroll-behavior: smooth;
         }
-        /* New Custom colors based on proposed palette */
+        /* New Custom colors based on proposed palette derived from logo */
         :root {
-            --primary-text-color: #2F4F4F; /* Dark Slate Gray */
-            --accent-color: #008080;   /* Deep Teal */
-            --light-accent-color: #E0FFFF; /* Light Cyan */
-            --secondary-accent-color: #DAA520; /* Goldenrod */
-            --dark-background: #2A2A2A; /* Dark Gray for footer */
+            --primary-text-color: #2A384F; /* Dark Blue-Gray from logo text */
+            --accent-color: #006F73;   /* Deep Teal from logo circle */
+            --light-accent-color: #E6F2F2; /* Very light Teal */
+            --secondary-accent-color: #B8860B; /* Muted Gold (complementary) */
+            --dark-background: #202020; /* Dark gray for footer */
 
-            /* Skill tag colors based on common tech branding (adjusted to new palette or kept if suitable) */
-            --skill-jupyter-bg: #E0FFFF; /* Light Cyan */
-            --skill-jupyter-color: #008080; /* Deep Teal */
+            /* Skill tag colors */
+            --skill-jupyter-color: #006F73; /* Deep Teal */
+            --skill-anaconda-color: #005053; /* Darker Teal */
+            --skill-spyder-color: #006F73;
+            --skill-visualstudio-color: #006F73;
+            --skill-firebase-color: #B8860B; /* Goldenrod */
+            --skill-github-color: #2A384F; /* Dark Blue-Gray */
+            --skill-git-color: #8B0000; /* Dark Red */
+            --skill-linux-color: #006F73;
+            --skill-ubuntu-color: #006F73;
 
-            --skill-anaconda-bg: #E6F3F3; /* Lighter Teal */
-            --skill-anaconda-color: #006666; /* Darker Teal */
-
-            --skill-spyder-bg: #E0FFFF;
-            --skill-spyder-color: #008080;
-
-            --skill-visualstudio-bg: #E0FFFF;
-            --skill-visualstudio-color: #008080;
-
-            --skill-firebase-bg: #FFEFD5; /* Papaya Whip */
-            --skill-firebase-color: #DAA520; /* Goldenrod */
-
-            --skill-github-bg: #F0F8FF; /* AliceBlue */
-            --skill-github-color: #2F4F4F; /* Dark Slate Gray */
-
-            --skill-git-bg: #FFF0F5; /* Lavender Blush */
-            --skill-git-color: #CD5C5C; /* IndianRed */
-
-            --skill-linux-bg: #E0FFFF;
-            --skill-linux-color: #008080;
-
-            --skill-ubuntu-bg: #E0FFFF;
-            --skill-ubuntu-color: #008080;
-
-            --skill-python-bg: #ADD8E6; /* LightBlue */
-            --skill-python-color: #000080; /* Navy */
-
-            --skill-java-bg: #F0F8FF;
-            --skill-java-color: #DAA520;
-
-            --skill-c-bg: #E0FFFF;
-            --skill-c-color: #008080;
-
-            --skill-cplusplus-bg: #E0FFFF;
-            --skill-cplusplus-color: #008080;
-
-            --skill-opencv-bg: #F5FFFA; /* MintCream */
-            --skill-opencv-color: #2E8B57; /* SeaGreen */
-
-            --skill-opengl-bg: #E0FFFF;
-            --skill-opengl-color: #008080;
-
-            --skill-tensorflow-bg: #FFEFD5;
-            --skill-tensorflow-color: #DAA520;
-
-            --skill-keras-bg: #F0FFFF; /* Azure */
+            --skill-python-color: #306998; /* Python Blue */
+            --skill-java-color: #B8860B;
+            --skill-c-color: #006F73;
+            --skill-cplusplus-color: #006F73;
+            --skill-opencv-color: #556B2F; /* Dark Olive Green */
+            --skill-opengl-color: #006F73;
+            --skill-tensorflow-color: #B8860B;
             --skill-keras-color: #800080; /* Purple */
+            --skill-caffe-color: #006F73;
+            --skill-ipyparallel-color: #2A384F;
+            --skill-ray-color: #B8860B;
 
-            --skill-caffe-bg: #E0FFFF;
-            --skill-caffe-color: #008080;
-
-            --skill-ipyparallel-bg: #F5FFFA;
-            --skill-ipyparallel-color: #2F4F4F;
-
-            --skill-ray-bg: #FAFAD2; /* LightGoldenrodYellow */
-            --skill-ray-color: #DAA520;
-
-            --skill-arduino-bg: #E0FFFF;
-            --skill-arduino-color: #008080;
-
-            --skill-raspberrypi-bg: #FFEFD5;
-            --skill-raspberrypi-color: #DAA520;
-
-            --skill-micropython-bg: #ADD8E6;
-            --skill-micropython-color: #000080;
-
-            --skill-bluetooth-bg: #E0FFFF;
-            --skill-bluetooth-color: #008080;
-
-            --skill-zigbee-bg: #F0F8FF;
-            --skill-zigbee-color: #2F4F4F;
-
-            --skill-wifi-bg: #FFEFD5;
-            --skill-wifi-color: #DAA520;
+            --skill-arduino-color: #006F73;
+            --skill-raspberrypi-color: #B8860B;
+            --skill-micropython-color: #306998;
+            --skill-bluetooth-color: #006F73;
+            --skill-zigbee-color: #2A384F;
+            --skill-wifi-color: #B8860B;
 
             /* Generic soft skills colors */
-            --skill-soft-color-1: #008080; /* Deep Teal */
-            --skill-soft-color-2: #DAA520; /* Goldenrod */
-            --skill-soft-color-3: #2F4F4F; /* Dark Slate Gray */
+            --skill-soft-color-1: #006F73; /* Deep Teal */
+            --skill-soft-color-2: #B8860B; /* Goldenrod */
+            --skill-soft-color-3: #2A384F; /* Dark Blue-Gray */
         }
 
         .text-primary { color: var(--primary-text-color); }
@@ -121,92 +72,95 @@
             color: var(--accent-color);
         }
 
-        /* Skill tag styling - with background and border for technical skills */
+        /* Skill tag styling - removed square background/border */
         .skill-tag {
-            @apply text-lg font-medium px-4 py-2 rounded-full shadow-sm transition duration-200 ease-in-out flex items-center justify-center whitespace-nowrap;
+            @apply text-lg font-medium px-4 py-2 rounded-full transition duration-200 ease-in-out flex items-center justify-center whitespace-nowrap;
+            background-color: transparent; /* No background */
+            border: none; /* No border */
+            box-shadow: none; /* No shadow */
         }
         .skill-tag i {
             margin-right: 0.5rem; /* Space between icon and text */
         }
 
-        /* Dynamic skill tag colors (with background and border) - updated with new palette */
-        .skill-jupyter { background-color: var(--skill-jupyter-bg); color: var(--skill-jupyter-color); border: 1px solid var(--skill-jupyter-color); }
-        .skill-jupyter:hover { background-color: color-mix(in srgb, var(--skill-jupyter-bg) 80%, #000); }
+        /* Dynamic skill tag colors (text color only, subtle hover) */
+        .skill-jupyter { color: var(--skill-jupyter-color); }
+        .skill-jupyter:hover { color: color-mix(in srgb, var(--skill-jupyter-color) 80%, #000); }
 
-        .skill-anaconda { background-color: var(--skill-anaconda-bg); color: var(--skill-anaconda-color); border: 1px solid var(--skill-anaconda-color); }
-        .skill-anaconda:hover { background-color: color-mix(in srgb, var(--skill-anaconda-bg) 80%, #000); }
+        .skill-anaconda { color: var(--skill-anaconda-color); }
+        .skill-anaconda:hover { color: color-mix(in srgb, var(--skill-anaconda-color) 80%, #000); }
 
-        .skill-spyder { background-color: var(--skill-spyder-bg); color: var(--skill-spyder-color); border: 1px solid var(--skill-spyder-color); }
-        .skill-spyder:hover { background-color: color-mix(in srgb, var(--skill-spyder-bg) 80%, #000); }
+        .skill-spyder { color: var(--skill-spyder-color); }
+        .skill-spyder:hover { color: color-mix(in srgb, var(--skill-spyder-color) 80%, #000); }
 
-        .skill-visualstudio { background-color: var(--skill-visualstudio-bg); color: var(--skill-visualstudio-color); border: 1px solid var(--skill-visualstudio-color); }
-        .skill-visualstudio:hover { background-color: color-mix(in srgb, var(--skill-visualstudio-bg) 80%, #000); }
+        .skill-visualstudio { color: var(--skill-visualstudio-color); }
+        .skill-visualstudio:hover { color: color-mix(in srgb, var(--skill-visualstudio-color) 80%, #000); }
 
-        .skill-firebase { background-color: var(--skill-firebase-bg); color: var(--skill-firebase-color); border: 1px solid var(--skill-firebase-color); }
-        .skill-firebase:hover { background-color: color-mix(in srgb, var(--skill-firebase-bg) 80%, #000); }
+        .skill-firebase { color: var(--skill-firebase-color); }
+        .skill-firebase:hover { color: color-mix(in srgb, var(--skill-firebase-color) 80%, #000); }
 
-        .skill-github { background-color: var(--skill-github-bg); color: var(--skill-github-color); border: 1px solid var(--skill-github-color); }
-        .skill-github:hover { background-color: color-mix(in srgb, var(--skill-github-bg) 80%, #000); }
+        .skill-github { color: var(--skill-github-color); }
+        .skill-github:hover { color: color-mix(in srgb, var(--skill-github-color) 80%, #000); }
 
-        .skill-git { background-color: var(--skill-git-bg); color: var(--skill-git-color); border: 1px solid var(--skill-git-color); }
-        .skill-git:hover { background-color: color-mix(in srgb, var(--skill-git-bg) 80%, #000); }
+        .skill-git { color: var(--skill-git-color); }
+        .skill-git:hover { color: color-mix(in srgb, var(--skill-git-color) 80%, #000); }
 
-        .skill-linux { background-color: var(--skill-linux-bg); color: var(--skill-linux-color); border: 1px solid var(--skill-linux-color); }
-        .skill-linux:hover { background-color: color-mix(in srgb, var(--skill-linux-bg) 80%, #000); }
+        .skill-linux { color: var(--skill-linux-color); }
+        .skill-linux:hover { color: color-mix(in srgb, var(--skill-linux-color) 80%, #000); }
 
-        .skill-ubuntu { background-color: var(--skill-ubuntu-bg); color: var(--skill-ubuntu-color); border: 1px solid var(--skill-ubuntu-color); }
-        .skill-ubuntu:hover { background-color: color-mix(in srgb, var(--skill-ubuntu-bg) 80%, #000); }
+        .skill-ubuntu { color: var(--skill-ubuntu-color); }
+        .skill-ubuntu:hover { color: color-mix(in srgb, var(--skill-ubuntu-color) 80%, #000); }
 
-        .skill-python { background-color: var(--skill-python-bg); color: var(--skill-python-color); border: 1px solid var(--skill-python-color); }
-        .skill-python:hover { background-color: color-mix(in srgb, var(--skill-python-bg) 80%, #000); }
+        .skill-python { color: var(--skill-python-color); }
+        .skill-python:hover { color: color-mix(in srgb, var(--skill-python-color) 80%, #000); }
 
-        .skill-java { background-color: var(--skill-java-bg); color: var(--skill-java-color); border: 1px solid var(--skill-java-color); }
-        .skill-java:hover { background-color: color-mix(in srgb, var(--skill-java-bg) 80%, #000); }
+        .skill-java { color: var(--skill-java-color); }
+        .skill-java:hover { color: color-mix(in srgb, var(--skill-java-color) 80%, #000); }
 
-        .skill-c { background-color: var(--skill-c-bg); color: var(--skill-c-color); border: 1px solid var(--skill-c-color); }
-        .skill-c:hover { background-color: color-mix(in srgb, var(--skill-c-bg) 80%, #000); }
+        .skill-c { color: var(--skill-c-color); }
+        .skill-c:hover { color: color-mix(in srgb, var(--skill-c-color) 80%, #000); }
 
-        .skill-cplusplus { background-color: var(--skill-cplusplus-bg); color: var(--skill-cplusplus-color); border: 1px solid var(--skill-cplusplus-color); }
-        .skill-cplusplus:hover { background-color: color-mix(in srgb, var(--skill-cplusplus-bg) 80%, #000); }
+        .skill-cplusplus { color: var(--skill-cplusplus-color); }
+        .skill-cplusplus:hover { color: color-mix(in srgb, var(--skill-cplusplus-color) 80%, #000); }
 
-        .skill-opencv { background-color: var(--skill-opencv-bg); color: var(--skill-opencv-color); border: 1px solid var(--skill-opencv-color); }
-        .skill-opencv:hover { background-color: color-mix(in srgb, var(--skill-opencv-bg) 80%, #000); }
+        .skill-opencv { color: var(--skill-opencv-color); }
+        .skill-opencv:hover { color: color-mix(in srgb, var(--skill-opencv-color) 80%, #000); }
 
-        .skill-opengl { background-color: var(--skill-opengl-bg); color: var(--skill-opengl-color); border: 1px solid var(--skill-opengl-color); }
-        .skill-opengl:hover { background-color: color-mix(in srgb, var(--skill-opengl-bg) 80%, #000); }
+        .skill-opengl { color: var(--skill-opengl-color); }
+        .skill-opengl:hover { color: color-mix(in srgb, var(--skill-opengl-color) 80%, #000); }
 
-        .skill-tensorflow { background-color: var(--skill-tensorflow-bg); color: var(--skill-tensorflow-color); border: 1px solid var(--skill-tensorflow-color); }
-        .skill-tensorflow:hover { background-color: color-mix(in srgb, var(--skill-tensorflow-bg) 80%, #000); }
+        .skill-tensorflow { color: var(--skill-tensorflow-color); }
+        .skill-tensorflow:hover { color: color-mix(in srgb, var(--skill-tensorflow-color) 80%, #000); }
 
-        .skill-keras { background-color: var(--skill-keras-bg); color: var(--skill-keras-color); border: 1px solid var(--skill-keras-color); }
-        .skill-keras:hover { background-color: color-mix(in srgb, var(--skill-keras-bg) 80%, #000); }
+        .skill-keras { color: var(--skill-keras-color); }
+        .skill-keras:hover { color: color-mix(in srgb, var(--skill-keras-color) 80%, #000); }
 
-        .skill-caffe { background-color: var(--skill-caffe-bg); color: var(--skill-caffe-color); border: 1px solid var(--skill-caffe-color); }
-        .skill-caffe:hover { background-color: color-mix(in srgb, var(--skill-caffe-bg) 80%, #000); }
+        .skill-caffe { color: var(--skill-caffe-color); }
+        .skill-caffe:hover { color: color-mix(in srgb, var(--skill-caffe-color) 80%, #000); }
 
-        .skill-ipyparallel { background-color: var(--skill-ipyparallel-bg); color: var(--skill-ipyparallel-color); border: 1px solid var(--skill-ipyparallel-color); }
-        .skill-ipyparallel:hover { background-color: color-mix(in srgb, var(--skill-ipyparallel-bg) 80%, #000); }
+        .skill-ipyparallel { color: var(--skill-ipyparallel-color); }
+        .skill-ipyparallel:hover { color: color-mix(in srgb, var(--skill-ipyparallel-color) 80%, #000); }
 
-        .skill-ray { background-color: var(--skill-ray-bg); color: var(--skill-ray-color); border: 1px solid var(--skill-ray-color); }
-        .skill-ray:hover { background-color: color-mix(in srgb, var(--skill-ray-bg) 80%, #000); }
+        .skill-ray { color: var(--skill-ray-color); }
+        .skill-ray:hover { color: color-mix(in srgb, var(--skill-ray-color) 80%, #000); }
 
-        .skill-arduino { background-color: var(--skill-arduino-bg); color: var(--skill-arduino-color); border: 1px solid var(--skill-arduino-color); }
-        .skill-arduino:hover { background-color: color-mix(in srgb, var(--skill-arduino-bg) 80%, #000); }
+        .skill-arduino { color: var(--skill-arduino-color); }
+        .skill-arduino:hover { color: color-mix(in srgb, var(--skill-arduino-color) 80%, #000); }
 
-        .skill-raspberrypi { background-color: var(--skill-raspberrypi-bg); color: var(--skill-raspberrypi-color); border: 1px solid var(--skill-raspberrypi-color); }
-        .skill-raspberrypi:hover { background-color: color-mix(in srgb, var(--skill-raspberrypi-bg) 80%, #000); }
+        .skill-raspberrypi { color: var(--skill-raspberrypi-color); }
+        .skill-raspberrypi:hover { color: color-mix(in srgb, var(--skill-raspberrypi-color) 80%, #000); }
 
-        .skill-micropython { background-color: var(--skill-micropython-bg); color: var(--skill-micropython-color); border: 1px solid var(--skill-micropython-color); }
-        .skill-micropython:hover { background-color: color-mix(in srgb, var(--skill-micropython-bg) 80%, #000); }
+        .skill-micropython { color: var(--skill-micropython-color); }
+        .skill-micropython:hover { color: color-mix(in srgb, var(--skill-micropython-color) 80%, #000); }
 
-        .skill-bluetooth { background-color: var(--skill-bluetooth-bg); color: var(--skill-bluetooth-color); border: 1px solid var(--skill-bluetooth-color); }
-        .skill-bluetooth:hover { background-color: color-mix(in srgb, var(--skill-bluetooth-bg) 80%, #000); }
+        .skill-bluetooth { color: var(--skill-bluetooth-color); }
+        .skill-bluetooth:hover { color: color-mix(in srgb, var(--skill-bluetooth-color) 80%, #000); }
 
-        .skill-zigbee { background-color: var(--skill-zigbee-bg); color: var(--skill-zigbee-color); border: 1px solid var(--skill-zigbee-color); }
-        .skill-zigbee:hover { background-color: color-mix(in srgb, var(--skill-zigbee-bg) 80%, #000); }
+        .skill-zigbee { color: var(--skill-zigbee-color); }
+        .skill-zigbee:hover { color: color-mix(in srgb, var(--skill-zigbee-color) 80%, #000); }
 
-        .skill-wifi { background-color: var(--skill-wifi-bg); color: var(--skill-wifi-color); border: 1px solid var(--skill-wifi-color); }
-        .skill-wifi:hover { background-color: color-mix(in srgb, var(--skill-wifi-bg) 80%, #000); }
+        .skill-wifi { color: var(--skill-wifi-color); }
+        .skill-wifi:hover { color: color-mix(in srgb, var(--skill-wifi-color) 80%, #000); }
 
         /* Soft skills colors - NO BACKGROUND, NO BORDER */
         .skill-soft-1 { color: var(--skill-soft-color-1); }
@@ -473,10 +427,9 @@
 <body class="bg-gray-50 text-gray-800 antialiased">
 
     <!-- Header/Navbar -->
-    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+    <header class="bg-white shadow-sm py-3 sticky top-0 z-50">
         <nav class="container mx-auto flex justify-between items-center px-4">
-            <!-- Removed logo from here, leaving just the name -->
-            <a href="#hero" class="text-2xl font-bold text-primary rounded-lg p-2 hover:bg-gray-50 transition duration-300">Zienab Esam</a>
+            <a href="#hero" class="text-3xl font-bold text-primary rounded-lg p-2 hover:bg-gray-50 transition duration-300 whitespace-nowrap">Zienab Esam</a>
             <div class="hidden md:flex space-x-6">
                 <a href="#summary" class="nav-link text-lg text-gray-600 hover:text-accent transition duration-300 py-2 px-3 rounded-md">Summary</a>
                 <a href="#skills" class="nav-link text-lg text-gray-600 hover:text-accent transition duration-300 py-2 px-3 rounded-md">Skills</a>
@@ -509,7 +462,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="relative h-screen bg-gradient-to-r from-[#006666] to-accent text-white flex flex-col items-center justify-center text-center p-4">
+        <section id="hero" class="relative h-screen bg-gradient-to-r from-[#005073] to-accent text-white flex flex-col items-center justify-center text-center p-4">
             <div class="max-w-4xl space-y-6">
                 <!-- Large Logo in Hero Section -->
                 <img src="اقتراح عمر للوجو.jpeg" alt="Zienab Esam Logo" class="mx-auto w-40 h-40 md:w-56 md:h-56 object-cover rounded-full shadow-lg border-4 border-light-accent mb-6 transform transition duration-500 hover:scale-110">
@@ -752,23 +705,23 @@
                 <div class="gallery-container">
                     <div class="gallery-inner" id="hobbies-gallery-inner">
                         <div class="gallery-item">
-                            <img src="images/2.jpg" alt="Hobby: Going to historical places." onerror="this.onerror=null; this.src='https://placehold.co/600x350/a78bfa/ffffff?text=Historical+Places';">
+                            <img src="2.jpg" alt="Hobby: Going to historical places." onerror="this.onerror=null; this.src='https://placehold.co/600x350/E6F2F2/2A384F?text=Historical+Places';">
                             <p>Delving into historical places allows me to connect with the past and appreciate cultural heritage.</p>
                         </div>
                         <div class="gallery-item">
-                            <img src="images/3.jpeg" alt="Hobby: Digital art." onerror="this.onerror=null; this.src='https://placehold.co/600x350/60a5fa/ffffff?text=Digital+Art';">
+                            <img src="3.jpeg" alt="Hobby: Digital art." onerror="this.onerror=null; this.src='https://placehold.co/600x350/E6F2F2/2A384F?text=Digital+Art';">
                             <p>Creating digital art is my creative outlet, blending technology with artistic expression.</p>
                         </div>
                         <div class="gallery-item">
-                            <img src="images/8.jpg" alt="Hobby: Photography." onerror="this.onerror=null; this.src='https://placehold.co/600x350/34d399/ffffff?text=Photography';">
+                            <img src="8.jpg" alt="Hobby: Photography." onerror="this.onerror=null; this.src='https://placehold.co/600x350/E6F2F2/2A384F?text=Photography';">
                             <p>Capturing moments and beauty through photography allows me to preserve memories and share perspectives.</p>
                         </div>
                         <div class="gallery-item">
-                            <img src="images/10.jpg" alt="Hobby: Learning new things everyday." onerror="this.onerror=null; this.src='https://placehold.co/600x350/f472b6/ffffff?text=Learning+New+Things';">
+                            <img src="10.jpg" alt="Hobby: Learning new things everyday." onerror="this.onerror=null; this.src='https://placehold.co/600x350/E6F2F2/2A384F?text=Learning+New+Things';">
                             <p>I'm constantly curious, always seeking to learn new skills and expand my horizons in various fields.</p>
                         </div>
                         <div class="gallery-item">
-                            <img src="images/11.jpg" alt="Hobby: Sports." onerror="this.onerror=null; this.src='https://placehold.co/600x350/5cb85c/ffffff?text=Sports';">
+                            <img src="11.jpg" alt="Hobby: Sports." onerror="this.onerror=null; this.src='https://placehold.co/600x350/E6F2F2/2A384F?text=Sports';">
                             <p>Engaging in sports keeps me active, disciplined, and provides a healthy balance to my work life.</p>
                         </div>
                     </div>
